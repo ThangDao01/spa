@@ -103,7 +103,7 @@ export default {
 
     methods: {
         onSave() {
-            let uri = 'http://127.0.0.1:8000/api/create/article';
+            let uri = 'api/create/article';
             this.$axios.post(uri, this.article).then((response) => {
                 this.$router.push('/');
             });

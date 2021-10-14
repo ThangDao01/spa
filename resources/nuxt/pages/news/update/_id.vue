@@ -106,11 +106,12 @@ export default {
         }
     },
     async created() {
-        this.article = await fetch('http://127.0.0.1:8000/api/news/'+this.$route.params.id).then(res => res.json())
+        let uri = `api/news/${this.$route.params.id}`;
+        this.article = await this.$axios.$get(uri);
     },
     methods:{
         onSave(){
-            let uri = `http://127.0.0.1:8000/api/article/update/${this.$route.params.id}`;
+            let uri = `api/article/update/${this.$route.params.id}`;
             this.$axios.post(uri, this.article).then((response) => {
                 this.$router.push('/');
             });
