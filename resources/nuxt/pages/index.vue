@@ -393,7 +393,7 @@
                     <div class="panel-container show">
                         <div class="panel-content">
                             <!-- datatable start -->
-                            <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
+                            <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100" v-if="ListArticle">
                                 <thead>
                                 <tr>
                                     <th>Id</th>
@@ -426,6 +426,9 @@
                                 </tbody>
                             </table>
                             <!-- datatable end -->
+                            <div v-if="!ListArticle">
+                                null data
+                            </div>
                         </div>
                     </div>
                 </div>
