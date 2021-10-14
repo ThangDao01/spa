@@ -1,0 +1,11 @@
+{
+    "private": true,
+    "scripts": {
+        "start": "laravel-nuxt dev",
+        "build": "laravel-nuxt build"
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.13.6",
+        "laravel-nuxt": "^1.0.0"
+    }
+}
