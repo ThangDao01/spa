@@ -15,3 +15,4 @@ Route::get('news/{id}',function ($id){
 });
 Route::post('create/article',[ArticleController::class,'createArticle']);
 Route::post('article/update/{id}', [ArticleController::class,'update']);
+
